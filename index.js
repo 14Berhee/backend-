@@ -1,12 +1,12 @@
-const express = require("express");
-const userRouter = require("./router/user");
-
+import express from "express";
+import { customerRouter } from "./router/customers.router";
 const app = express();
+
 app.use(express.json());
 
-const port = 8080;
+const port = 8000;
 
-app.use("/user", userRouter);
+app.use("/customers", customerRouter);
 
 app.listen(port, () => {
   console.log(`server running at a http://localhost:${port}/`);

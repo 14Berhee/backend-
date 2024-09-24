@@ -7,7 +7,7 @@ exports.deleteUser = (request, response) => {
   const { id } = request.params;
   const { body } = request;
 
-  const deletedUser = users.splice((ustsan) => {
+  const deletedUser = users.filter((ustsan) => {
     if (ustsan.id === Number(id)) {
       ustsan.firstname = body.firstname;
       ustsan.lastname = body.lastname;
