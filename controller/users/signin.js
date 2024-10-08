@@ -10,6 +10,6 @@ export const signIn = async (request, response) => {
 
     response.status(200).json({ users: users });
   } catch (error) {
-    response.status(500).json({ message: error });
+    response.status(400).json({ message: error });
   }
 };
