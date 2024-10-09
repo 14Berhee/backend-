@@ -13,6 +13,7 @@ export const getRecords = async (_request, response) => {
 };
 
 export const addRecords = async (request, response) => {
+  console.log("eniig duudalla shuu");
   const { userid, name, amount, description, transactiontype, categoryid } =
     request.body;
 
@@ -22,6 +23,7 @@ export const addRecords = async (request, response) => {
 
     response.status(201).json({ record: response.body });
   } catch (error) {
+    console.log(error);
     response.status(500).json({ message: error });
   }
 };
